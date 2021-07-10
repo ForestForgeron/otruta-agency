@@ -17,7 +17,7 @@
           </NuxtLink>
       </li>
       <li class="menu__list-item">
-        <NuxtLink to="#" class="menu__link">
+        <NuxtLink to="portfolio" class="menu__link">
             роботи
           </NuxtLink>
       </li>
