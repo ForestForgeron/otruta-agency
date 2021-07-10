@@ -1,7 +1,7 @@
 <template>
   <div>
     <ul class="services">
-      <li v-for="item in menuItemsUkr" :key="item.id">
+      <li class="services__li" v-for="item in menuItemsUkr" :key="item.id">
         <div
           class="services__text"
           v-show="item.isHover"
@@ -85,10 +85,14 @@ export default {
   flex-direction: column;
 }
 
+.services__li {
+  position: relative;
+}
+
 .services__text {
   position: absolute;
-  bottom: 255px;
-  right: 500px;
+  top: -175px;
+  left: -820px;
 
   width: 800px;
   height: 270px;
