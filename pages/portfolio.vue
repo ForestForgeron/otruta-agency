@@ -1,37 +1,20 @@
 <template>
   <div>
-    <ul class="list">
-      <li v-for="item in lol" class="item">
-        <span>
-          {{ item }}
-        </span>
-        
-      </li>
-    </ul>
+    <div class="project-list-wrapper">
+      <Project-list />
+    </div>
   </div>
 </template>
 
 <script>
 export default {
   data() {
-    return {
-      lol: [
-        'kek',
-        'kok'
-      ],
-    };
-  }
-}
+    return {};
+  },
+};
 </script>
 
 <style lang="scss">
-  .list {
-    position: absolute;
-    top: 40vh;
-    right: 40vw;
-  }
-
-  .item {
-    font-size: 40px;
-  }
+.project-list-wrapper {
+}
 </style>
