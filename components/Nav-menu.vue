@@ -52,12 +52,12 @@ export default {
   align-items: center;
   gap: 11%;
 
-  width: 100%;
-  min-width: 375px;
+  width: 495px;
+  //min-width: 375px;
   height: 100vh;
   min-height: 710px;
 
-  padding: 10% 19.5% 15%;
+  padding: 50px 96px 75px;
   background-color: #000;
 
   text-transform: uppercase;

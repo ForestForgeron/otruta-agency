@@ -4,10 +4,10 @@
       <li class="services__li" v-for="item in menuItemsUkr" :key="item.id">
         <div
           class="services__text"
-          v-show="item.isHover"
-          :style="item.isHover ? { backgroundColor: item.hoverColor } : ''"
+          ref="servicesText"
+          :style="popoverEffect(item.id)"
         >
-          {{ currentDescription }}
+          {{ item.description }}
         </div>
         <span
           class="services__item"
@@ -27,6 +27,7 @@ export default {
   data() {
     return {
       currentDescription: "",
+      descriptionWidth: [],
 
       menuItemsUkr: [
         {
@@ -73,6 +74,17 @@ export default {
       this.menuItemsUkr[itemId].isHover = !this.menuItemsUkr[itemId].isHover;
       this.currentDescription = this.menuItemsUkr[itemId].description;
     },
+
+    popoverEffect(itemId) {
+      const descriptionStyle = {};
+      if (this.menuItemsUkr[itemId].isHover) {
+        descriptionStyle["backgroundColor"] =
+          this.menuItemsUkr[itemId].hoverColor;
+        descriptionStyle["visibility"] = "visible";
+      }
+
+      return descriptionStyle;
+    },
   },
 
   computed: {},
@@ -91,12 +103,14 @@ export default {
 
 .services__text {
   position: absolute;
-  top: -175px;
-  left: -820px;
+  bottom: -5px;
+  right: calc(100% + 20px);
 
-  width: 800px;
-  height: 270px;
+  min-width: 815px;
+  //height: 270px;
   padding: 67.5px 72px;
+
+  visibility: hidden;
 
   text-transform: uppercase;
 

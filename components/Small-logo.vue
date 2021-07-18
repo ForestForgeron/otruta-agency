@@ -1,21 +1,18 @@
 <template>
   <div>
-    <img
-      src="~/assets/logo-small.svg"
-      alt="small otruta logo"
-      class="logo-small"
-    >
-    
+    <NuxtLink to="/">
+      <img
+        src="~/assets/logo-small.svg"
+        alt="small otruta logo"
+        class="logo-small"
+      />
+    </NuxtLink>
   </div>
 </template>
 
 <script>
-export default {
-  
-}
+export default {};
 </script>
 
 <style lang="scss">
-
-  
 </style>
