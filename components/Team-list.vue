@@ -17,7 +17,7 @@
             </div>
 
             <img
-              src="~/assets/team-photo.svg"
+              src="~/assets/eagle.webp"
               alt="photo of the team"
               class="team__photo"
               :style="person.isHover ? { outlineColor: person.hoverColor } : ''"
@@ -54,7 +54,7 @@ export default {
           hoverColor: "#6f00ff",
           isHover: false,
           description:
-            "Convallis nunc vitae diam lacus duis. Tortor volutpat libero dictum enim habitasse nulla mattis. Turpis ac gravida dolor viverra bibendum vel. Fringilla nulla malesuada sed ipsum ante. Varius non odio ut est ipsum fermentum blandit. Senectus pulvinar ac neque eget euismod diam lacus duis. Tortor volutpat libero dictum enim habitasse nulla mattis. Turpis ac gravida dolor viverra bibendum vel. Fringilla nulla malesuada sed ipsum ante. Varius non odio ut est ipsum fermentum blandit. Senectus pulvinar ac neque bendum vel. Fringilla nulla malesuada sed ipsum ante. Varius non odio ut est ipsum fermentum blandit. Senectus pulvinar ac n.",
+            "Convallis nunc vitae diam lacrpis ac gravida dolor viverra bibendum vel. Fringilla nulla malesuada sed ipsum ante. Varius non odio ut est ipsum fermentum blandit. Senectus pulvinar ac neque bendum vel. Fringilla nulla malesuada sed ipsum ante. Varius non odio ut est ipsum fermentum blandit. Senectus pulvinar ac n.",
         },
         {
           id: "1",
@@ -90,8 +90,39 @@ export default {
         },
         {
           id: "4",
-          name: "jack",
-          field: "fdfdfdf",
+          name: "Иштван",
+          field: "квантовая цитология",
+          photo: "",
+          hoverColor: "#f3a0ba",
+          isHover: false,
+          description:
+            "Convallis nunc vitae diam lacus duis. Tortor volutpat libero dictum enim habitasse nulla mattis. Turpis ac gravida dolor viverra bibendum vel. Fringilla nulla malesuada sed ipsum ante. Varius non odio ut est ipsum fermentum blandit. Senectus pulvit euismod.",
+        },
+        {
+          id: "5",
+          name: "Хидео Кодзима",
+          field: "геймдев",
+          photo: "",
+          hoverColor: "#f3a0ba",
+          isHover: false,
+          description:
+            "Convallis nunc vitae diam lacus duis. Tortor volutpat libero dictum enim habitasse nulla mattis. Turpis ac gravida dolor viverra bibendum vel. Fringilla nulla malesuada sed ipsum ante. Varius non odio ut est ipsum fermentum blandit. Senectus pulvit euismod.",
+        },
+        {
+          id: "6",
+          name: "Параска",
+          field: "надои молока",
+          photo: "",
+          hoverColor: "#f3a0ba",
+          isHover: false,
+          description:
+            "Convallis nunc vitae diam lacus duis. Tortor volutpat libero dictum enim habitasse nulla mattis. Turpis ac gravida dolor viverra bibendum vel. Fringilla nulla malesuada sed ipsum ante. Varius non odio ut est ipsum fermentum blandit. Senectus pulvit euismod.",
+          position: "0",
+        },
+        {
+          id: "7",
+          name: "Гена",
+          field: "добрый крокодил",
           photo: "",
           hoverColor: "#f3a0ba",
           isHover: false,
@@ -144,7 +175,7 @@ export default {
     //gap: 75px;
     justify-content: center;
 
-    max-width: 88vw;
+    max-width: 92vw;
     max-height: 77.5vh;
 
     overflow: hidden;
@@ -155,17 +186,20 @@ export default {
     display: flex;
     flex-direction: column;
 
-    max-height: 655px;
-    width: 365px;
+    //max-height: 655px;
+    //max-width: 365px;
+    //width: 19vw;
 
     font-size: calc(34px + 12 * (100vw / 1920));
-    //line-height: 55px;
+
     font-weight: 700;
   }
 
   &__photo {
-    //width: 19vw;
+    //width: 18vw;
+    height: 55.5vh;
     outline: 3px transparent solid;
+    object-fit: cover;
   }
 
   &__description {
@@ -178,7 +212,7 @@ export default {
     //width: 25vw;
     //height: 45vh;
 
-    min-width: 400px;
+    min-width: 600px;
 
     //padding: 8.3vh 1vw 8.3vh 1.75vw;
     padding: 81px 18px 81px 33px;
@@ -202,8 +236,8 @@ export default {
     width: 100%;
   }
   &__slide {
-    width: 440px;
-    margin-right: 68px;
+    width: 370px;
+    margin-right: 75px;
     flex-grow: unset;
     flex-shrink: unset;
     padding: 3px;
