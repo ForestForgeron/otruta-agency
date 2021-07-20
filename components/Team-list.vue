@@ -25,6 +25,7 @@
                   ? {
                       outlineColor: person.hoverColor,
                       transition: 'all 0.3s ease 0s',
+                      cursor: 'pointer',
                     }
                   : ''
               "
@@ -36,7 +37,11 @@
               class="team__field"
               :style="
                 person.isHover
-                  ? { color: person.hoverColor, transition: 'all 0.3s ease 0s' }
+                  ? {
+                      color: person.hoverColor,
+                      transition: 'all 0.3s ease 0s',
+                      cursor: 'pointer',
+                    }
                   : ''
               "
             >

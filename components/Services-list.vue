@@ -130,6 +130,7 @@ export default {
   &:hover {
     text-decoration: underline;
     text-underline-position: under;
+    cursor: pointer;
   }
 }
 </style>

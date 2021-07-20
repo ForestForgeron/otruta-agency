@@ -114,6 +114,7 @@ export default {
 
   &:hover {
     color: #ff6058;
+    cursor: pointer;
   }
 }
 
@@ -132,6 +133,7 @@ export default {
   &:focus,
   &:hover {
     color: #ff6058;
+    cursor: pointer;
   }
 }
 
