@@ -123,6 +123,8 @@ export default {
     right: 0;
     bottom: 0;
 
+    transition: all 0.3s ease 0s;
+
     //opacity: 0;
 
     &:hover {

@@ -125,6 +125,8 @@ export default {
   font-weight: 700;
   line-height: 87px;
 
+  transition: all 0.3s ease 0s;
+
   &:hover {
     text-decoration: underline;
     text-underline-position: under;

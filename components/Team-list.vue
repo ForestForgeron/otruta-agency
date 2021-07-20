@@ -20,14 +20,25 @@
               src="~/assets/eagle.webp"
               alt="photo of the team"
               class="team__photo"
-              :style="person.isHover ? { outlineColor: person.hoverColor } : ''"
+              :style="
+                person.isHover
+                  ? {
+                      outlineColor: person.hoverColor,
+                      transition: 'all 0.3s ease 0s',
+                    }
+                  : ''
+              "
             />
             <div class="team__name">
               {{ person.name }}
             </div>
             <div
               class="team__field"
-              :style="person.isHover ? { color: person.hoverColor } : ''"
+              :style="
+                person.isHover
+                  ? { color: person.hoverColor, transition: 'all 0.3s ease 0s' }
+                  : ''
+              "
             >
               {{ person.field }}
             </div>
@@ -155,6 +166,7 @@ export default {
       if (this.teamList[itemId].isHover) {
         descriptionStyle["backgroundColor"] = this.teamList[itemId].hoverColor;
         descriptionStyle["visibility"] = "visible";
+        descriptionStyle["transition"] = "all 0.3s ease 0s";
       }
 
       if (this.teamList[itemId].position == "0") {

@@ -4,7 +4,7 @@
       <NuxtLink to="#" class="lang"> укр </NuxtLink>
       <NuxtLink to="#" class="lang"> en </NuxtLink>
     </div>
-    <div class="triangle"></div>
+
     <ul class="menu__list">
       <li class="menu__list-item">
         <NuxtLink to="services" class="menu__link"> послуги </NuxtLink>
@@ -18,6 +18,7 @@
       <li class="menu__list-item">
         <NuxtLink to="#" class="menu__link"> контакты </NuxtLink>
       </li>
+      <div class="triangle start-home"></div>
     </ul>
     <div
       :class="isClosed ? 'menu__socials menu__socials_column' : 'menu__socials'"
@@ -44,9 +45,6 @@ export default {
 
 <style lang="scss">
 .menu {
-  position: absolute;
-  top: 0;
-
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -57,23 +55,10 @@ export default {
   height: 100vh;
   min-height: 710px;
 
-  padding: 50px 96px 75px;
+  padding: 50px 0 75px;
   background-color: #000;
 
   text-transform: uppercase;
-}
-
-.triangle {
-  position: absolute;
-  right: 0;
-  top: 190px;
-
-  width: 0;
-  height: 0;
-
-  border-top: 42px solid transparent;
-  border-right: 54px solid #fdfeff;
-  border-bottom: 42px solid transparent;
 }
 
 .menu__languages {
@@ -81,10 +66,12 @@ export default {
 }
 
 .menu__list {
+  position: relative;
   display: flex;
   flex-direction: column;
   gap: 18%;
 
+  width: 100%;
   height: 67%;
 
   align-items: center;
@@ -123,6 +110,8 @@ export default {
 
   font-weight: 700;
 
+  transition: all 0.3s ease 0s;
+
   &:hover {
     color: #ff6058;
   }
@@ -138,9 +127,46 @@ export default {
 
   color: #fff;
 
+  transition: all 0.3s ease 0s;
+
   &:focus,
   &:hover {
     color: #ff6058;
   }
+}
+
+.triangle {
+  position: absolute;
+  right: 0;
+  top: 0;
+
+  width: 0;
+  height: 0;
+
+  border-top: 42px solid transparent;
+  border-right: 54px solid #fdfeff;
+  border-bottom: 42px solid transparent;
+
+  transition: all 0.5s ease 0s;
+}
+
+.menu__list .start-about,
+li:nth-child(1):hover ~ .triangle {
+  top: 0;
+}
+
+.menu__list .start-about,
+li:nth-child(2):hover ~ .triangle {
+  top: 160px;
+}
+
+.menu__list .start-about,
+li:nth-child(3):hover ~ .triangle {
+  top: 330px;
+}
+
+.menu__list .start-about,
+li:nth-child(4):hover ~ .triangle {
+  top: 490px;
 }
 </style>
