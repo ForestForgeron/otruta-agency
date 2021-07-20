@@ -1,0 +1,1 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[9],{272:function(n,t,e){"use strict";e.r(t);var c={data:function(){return{}}},o=e(37),component=Object(o.a)(c,(function(){var n=this.$createElement,t=this._self._c||n;return t("div",{staticClass:"container"},[t("Main-Logo")],1)}),[],!1,null,null,null);t.default=component.exports}}]);
