@@ -189,7 +189,7 @@ export default {
   &__list {
     display: flex;
     flex-wrap: wrap;
-    //gap: 75px;
+
     justify-content: center;
 
     max-width: 92vw;

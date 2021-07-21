@@ -17,5 +17,7 @@ export default {};
 <style lang="scss">
 .logo-small {
   width: 8.5vw;
+
+  z-index: 5;
 }
 </style>

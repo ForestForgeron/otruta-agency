@@ -107,7 +107,7 @@ export default {
   right: calc(100% + 20px);
 
   min-width: 815px;
-  //height: 270px;
+
   padding: 67.5px 72px;
 
   visibility: hidden;
