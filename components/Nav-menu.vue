@@ -16,7 +16,7 @@
         <NuxtLink to="team" class="menu__link"> команда </NuxtLink>
       </li>
       <li class="menu__list-item">
-        <NuxtLink to="contacts" class="menu__link"> контакты </NuxtLink>
+        <NuxtLink to="contacts" class="menu__link"> контакти </NuxtLink>
       </li>
       <div class="triangle start-home"></div>
     </ul>

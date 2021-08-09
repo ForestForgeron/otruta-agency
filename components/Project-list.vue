@@ -113,6 +113,8 @@ export default {
   &__img {
     width: 565px;
     height: 445px;
+
+    object-fit: cover;
   }
 
   &__img-mask {

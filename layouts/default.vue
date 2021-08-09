@@ -12,7 +12,10 @@
       <Nav-menu />
     </div>
     <div class="content">
-      <div class="small-logo-wrapper">
+      <div
+        class="small-logo-wrapper"
+        :style="this.$route.path == '/portfolio' ? 'display: none;' : ''"
+      >
         <Small-logo />
       </div>
       <Nuxt />
@@ -35,14 +38,6 @@ export default {
   },
 
   computed: {
-    classNav() {
-      return {
-        navbarMain: this.$route.path == "/",
-        navbar: this.$route.path != "/",
-        navbarMainClosed: this.isNavbarClosed,
-      };
-    },
-
     chooseNav() {
       if (this.$route.path == "/") {
         return "navbarMain";
@@ -50,10 +45,6 @@ export default {
         return "navbar";
       }
     },
-  },
-
-  mounted() {
-    console.log(this.$route);
   },
 };
 </script>

@@ -1,6 +1,6 @@
 <template>
   <div class="team">
-    <div class="team__list">
+    <div class="team__list" ref="scroll_container" @mousewheel="scrollX">
       <carousel :perPage="4" :paginationEnabled="false" class="team__carousel">
         <slide v-for="person in teamList" :key="person.id" class="team__slide">
           <div
@@ -146,6 +146,26 @@ export default {
             "Convallis nunc vitae diam lacus duis. Tortor volutpat libero dictum enim habitasse nulla mattis. Turpis ac gravida dolor viverra bibendum vel. Fringilla nulla malesuada sed ipsum ante. Varius non odio ut est ipsum fermentum blandit. Senectus pulvit euismod.",
           position: "0",
         },
+        {
+          id: "8",
+          name: "Jason Lee",
+          field: "marketing",
+          photo: "",
+          hoverColor: "#f3a0ba",
+          isHover: false,
+          description:
+            "Convallis nunc vitae diam lacus duis. Tortor volutpat libero dictum enim habitasse nulla mattis. Turpis ac gravida dolor viverra bibendum vel. Fringilla nulla malesuada sed ipsum ante. Varius non odio ut est ipsum fermentum blandit. Senectus pulvit euismod.",
+        },
+        {
+          id: "9",
+          name: "Mary Sue",
+          field: "witch bitch",
+          photo: "",
+          hoverColor: "#f3a0ba",
+          isHover: false,
+          description:
+            "Convallis nunc vitae diam lacus duis. Tortor volutpat libero dictum enim habitasse nulla mattis. Turpis ac gravida dolor viverra bibendum vel. Fringilla nulla malesuada sed ipsum ante. Varius non odio ut est ipsum fermentum blandit. Senectus pulvit euismod.",
+        },
       ],
     };
   },
@@ -155,6 +175,10 @@ export default {
   },
 
   methods: {
+    scrollX(e) {
+      this.$refs["scroll_container"].scrollLeft += e.deltaY;
+    },
+
     hoverEffect(itemId) {
       this.teamList[itemId].isHover = !this.teamList[itemId].isHover;
       this.currentDescription = this.teamList[itemId].description;
@@ -175,7 +199,9 @@ export default {
       }
 
       if (this.teamList[itemId].position == "0") {
-        descriptionStyle["left"] = "-" + this.descriptionWidth[itemId] + "px";
+        descriptionStyle["right"] = "100%";
+      } else {
+        descriptionStyle["left"] = "100%";
       }
 
       return descriptionStyle;
@@ -224,7 +250,6 @@ export default {
     visibility: hidden;
     z-index: 2;
     top: 30px;
-    left: 100%;
 
     //width: 25vw;
     //height: 45vh;
