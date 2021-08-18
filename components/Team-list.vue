@@ -1,7 +1,12 @@
 <template>
   <div class="team">
     <div class="team__list" ref="scroll_container" @mousewheel="scrollX">
-      <carousel :perPage="4" :paginationEnabled="false" class="team__carousel">
+      <carousel
+        :perPage="4"
+        :paginationEnabled="false"
+        ref="slider"
+        class="team__carousel"
+      >
         <slide v-for="person in teamList" :key="person.id" class="team__slide">
           <div
             class="team__item"
@@ -172,6 +177,21 @@ export default {
 
   mounted() {
     this.getWidth();
+    console.log(this.$refs.slider);
+    document.addEventListener("wheel", (e) => {
+      //document.getElementById('scroll_container').scrollLeft += e.deltaY;
+      this.$nextTick(() => {
+        if (e.wheelDelta > 0) {
+          const lol = this.$refs.slider.getPreviousPage();
+          this.$refs.slider.goToPage(lol);
+        } else {
+          const kek = this.$refs.slider.getNextPage();
+          this.$refs.slider.goToPage(kek);
+        }
+      });
+
+      // console.log(this.$refs.slider);
+    });
   },
 
   methods: {
