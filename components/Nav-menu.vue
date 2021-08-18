@@ -72,7 +72,7 @@ export default {
   gap: 18%;
 
   width: 100%;
-  height: 67%;
+  height: 568px;
 
   align-items: center;
   justify-content: flex-start;
@@ -123,7 +123,8 @@ export default {
 }
 
 .menu__link {
-  font-size: 50px;
+  //font-size: 50px;
+  font-size: calc(24px + 16 * (100vw / 1920));
   font-weight: 700;
 
   color: #fff;
@@ -145,30 +146,30 @@ export default {
   width: 0;
   height: 0;
 
-  border-top: 42px solid transparent;
-  border-right: 54px solid #fdfeff;
-  border-bottom: 42px solid transparent;
+  border-top: 27px solid transparent; //42
+  border-right: 40px solid #fdfeff; //54
+  border-bottom: 27px solid transparent; //42
 
   transition: all 0.5s ease 0s;
 }
 
-.menu__list .start-about,
+.menu__list .start-services,
 li:nth-child(1):hover ~ .triangle {
-  top: 0;
+  top: 1%;
 }
 
-.menu__list .start-about,
+.menu__list .start-portfolio,
 li:nth-child(2):hover ~ .triangle {
-  top: 160px;
+  top: 27%; //16vh
 }
 
-.menu__list .start-about,
+.menu__list .start-team,
 li:nth-child(3):hover ~ .triangle {
-  top: 330px;
+  top: 53.5%; //31.5vh;
 }
 
-.menu__list .start-about,
+.menu__list .start-contacts,
 li:nth-child(4):hover ~ .triangle {
-  top: 490px;
+  top: 80%; //47vh;
 }
 </style>

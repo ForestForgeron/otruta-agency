@@ -125,7 +125,7 @@ html {
 }
 
 .navbarMainClosed {
-  left: -430px;
+  left: -450px;
 
   //width: 26%;
 }
