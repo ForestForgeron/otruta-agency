@@ -108,7 +108,7 @@ html {
 
   left: 0;
 
-  transition: all 1s ease-in-out;
+  transition: all 1s ease-in-out 0.3s;
 }
 
 .navbar {

@@ -69,7 +69,7 @@ export default {
   position: relative;
   display: flex;
   flex-direction: column;
-  gap: 18%;
+  gap: 75px;
 
   width: 100%;
   height: 568px;
@@ -100,14 +100,11 @@ export default {
   }
 }
 
-.menu__socials-link {
-  font-size: 41px;
-}
-
 .lang,
 .menu__socials-link {
   color: #fff;
 
+  font-size: 36px;
   font-weight: 700;
 
   transition: all 0.3s ease 0s;
@@ -118,13 +115,9 @@ export default {
   }
 }
 
-.lang {
-  font-size: 38px;
-}
-
 .menu__link {
-  //font-size: 50px;
-  font-size: calc(24px + 16 * (100vw / 1920));
+  font-size: 50px;
+
   font-weight: 700;
 
   color: #fff;
@@ -150,26 +143,103 @@ export default {
   border-right: 40px solid #fdfeff; //54
   border-bottom: 27px solid transparent; //42
 
-  transition: all 0.5s ease 0s;
+  transition: all 0.5s ease-in 0s;
 }
 
 .menu__list .start-services,
 li:nth-child(1):hover ~ .triangle {
-  top: 1%;
+  top: 15px;
 }
 
 .menu__list .start-portfolio,
 li:nth-child(2):hover ~ .triangle {
-  top: 27%; //16vh
+  top: 150px;
 }
 
 .menu__list .start-team,
 li:nth-child(3):hover ~ .triangle {
-  top: 53.5%; //31.5vh;
+  top: 285px; //31.5vh;
 }
 
 .menu__list .start-contacts,
 li:nth-child(4):hover ~ .triangle {
-  top: 80%; //47vh;
+  top: 415px; //47vh;
+}
+
+@media screen and(max-height: 800px) {
+  .lang,
+  .menu__socials-link {
+    font-size: 30px;
+  }
+  .menu__link {
+    font-size: 40px;
+  }
+
+  .triangle {
+    border-top: 27px solid transparent; //42
+    border-right: 40px solid #fdfeff; //54
+    border-bottom: 27px solid transparent; //42
+
+    transition: all 0.5s ease-in 0s;
+  }
+
+  .menu__list .start-services,
+  li:nth-child(1):hover ~ .triangle {
+    top: 15px;
+  }
+
+  .menu__list .start-portfolio,
+  li:nth-child(2):hover ~ .triangle {
+    top: 150px;
+  }
+
+  .menu__list .start-team,
+  li:nth-child(3):hover ~ .triangle {
+    top: 285px; //31.5vh;
+  }
+
+  .menu__list .start-contacts,
+  li:nth-child(4):hover ~ .triangle {
+    top: 415px; //47vh;
+  }
+}
+
+@media screen and(max-height: 650px) {
+  .menu__list {
+    gap: 50px;
+  }
+  .lang,
+  .menu__socials-link {
+    font-size: 26px;
+  }
+  .menu__link {
+    font-size: 35px;
+  }
+
+  .triangle {
+    border-top: 22px solid transparent; //42
+    border-right: 35px solid #fdfeff; //54
+    border-bottom: 22px solid transparent; //42
+  }
+
+  .menu__list .start-services,
+  li:nth-child(1):hover ~ .triangle {
+    top: 0;
+  }
+
+  .menu__list .start-portfolio,
+  li:nth-child(2):hover ~ .triangle {
+    top: 95px;
+  }
+
+  .menu__list .start-team,
+  li:nth-child(3):hover ~ .triangle {
+    top: 190px; //31.5vh;
+  }
+
+  .menu__list .start-contacts,
+  li:nth-child(4):hover ~ .triangle {
+    top: 290px; //47vh;
+  }
 }
 </style>

@@ -111,8 +111,8 @@ export default {
     position: relative;
   }
   &__img {
-    width: 565px;
-    height: 445px;
+    width: 29.5vw;
+    height: 23vw; //445px;
 
     object-fit: cover;
   }

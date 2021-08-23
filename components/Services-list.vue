@@ -81,6 +81,7 @@ export default {
         descriptionStyle["backgroundColor"] =
           this.menuItemsUkr[itemId].hoverColor;
         descriptionStyle["visibility"] = "visible";
+        descriptionStyle["transition"] = "all 0.3s ease 0s";
       }
 
       return descriptionStyle;
@@ -108,20 +109,20 @@ export default {
 
   min-width: 815px;
 
-  padding: 67.5px 72px;
+  padding: 6vh 5vw;
 
   visibility: hidden;
 
   text-transform: uppercase;
 
-  font-size: 29px;
+  font-size: calc(19px + 10 * (100vw / 1920));
   font-weight: 700;
   line-height: 27px;
   color: #fff;
 }
 
 .services__item {
-  font-size: 73px;
+  font-size: calc(24px + 49 * (100vw / 1920));
   font-weight: 700;
   line-height: 87px;
 
